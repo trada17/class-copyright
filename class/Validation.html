@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm(){
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == ""){
+                alert("Please enter your name, a name is required for sign up");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>We will almost be done</h1>
+    <h4>Please enter your name</h4>
+    <form name="myForm" onsubmit="validateForm()">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="submit">
+        <p id="message"></p>
+    </form>
+</body>
+</html>
